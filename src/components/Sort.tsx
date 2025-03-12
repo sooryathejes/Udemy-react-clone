@@ -11,7 +11,7 @@ export default function Sort() {
             <option className='bg-white' value="">Most Reviewed</option>
             <option className='bg-white' value="">Newest</option>
         </select>
-      </div>
-    </div>
+      </div> 
+    </div> 
   )
 }

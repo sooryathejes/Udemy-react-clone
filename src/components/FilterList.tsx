@@ -13,11 +13,12 @@ type FilterProps = {
 
 export default function FilterList({
   closeList,
-  fltrRating,
+  fltrRating, 
   fltrLang,
   fltrPrice, 
 }: FilterProps) {
-  let [dropdown, setDropdown] = useState({ rating: false, language: false, price: false });
+  const [dropdown, setDropdown] = useState({ rating: false, language: false, price: false });
+  const [selectedRating, setSelectedRating] = useState(4.5);
 
   const toggleDropdown = (section: 'rating' | 'language' | 'price') => {
     setDropdown(prevState => ({
@@ -26,8 +27,13 @@ export default function FilterList({
     }));
   };
 
+  const handleRatingChange = (min: number, max: number) => {
+    setSelectedRating(min); 
+    fltrRating(min, max); 
+  };
+
   return (
-    <div className="top-0 left-0 h-[100vh] w-full bg-[#0a0a0aa8] z-51 flex flex-row-reverse fixed 2xl:relative 2xl:w-auto 2xl:min-w-[241px] 2xl:max-w-[311px] 2xl:bg-[#fff]">
+    <div className="top-0 left-0 h-[100vh] w-full bg-[#0a0a0aa8] z-51 flex flex-row-reverse fixed 2xl:relative 2xl:w-auto 2xl:min-w-[241px] 2xl:max-w-[311px] 2xl:bg-[#fff] duration-300 ease-in-out">
       <div className="w-[78%] max-w-[280px] z-100 bg-white 2xl:w-[100%] 2xl:left-0 2xl:ml-0 justify-self-start 2xl:absolute">
         <div className="p-16 font-[U-reg] text-16 text-black shadow-lg 2xl:hidden">
           <p>10000 results</p> 
@@ -38,12 +44,12 @@ export default function FilterList({
               className="flex justify-between w-full py-16 font-[U-bold] text-16 cursor-pointer border-t"
               onClick={() => toggleDropdown('rating')}
             >
-              <h3>Ratings</h3>
-              <svg
+              <h3>Ratings</h3> 
+              <svg 
                 className={`dropdown_icon transition-transform duration-300 ${dropdown.rating ? 'rotate-180' : ''}`}
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
-                focusable="false"
+                focusable="false"  
                 width="24"
                 height="24"
               >
@@ -58,27 +64,55 @@ export default function FilterList({
               </svg>
             </div>
             {dropdown.rating && (
-              <div className="pt-8 pb-16">
+              <div className="pt-8 pb-16"> 
                 <div className="flex py-8">
-                  <input className="me-8" type="radio" id='one' name='two' onClick={() => fltrRating(4.5, 5.0)} />
+                  <input 
+                    className="me-8"  
+                    type="radio" 
+                    id='one' 
+                    name='rating' 
+                    checked={selectedRating === 4.5} 
+                    onChange={() => handleRatingChange(4.5, 5.0)} 
+                  />
                   <img src={fourHalf} alt="" />
                   <div className="font-[U-reg] text-14 text-[#303141] ms-4">4.5 & up</div>
                   <div className="ms-8 font-[U-reg] text-14 text-[#303141]">(10,000) </div>
                 </div>
                 <div className="flex py-8">
-                  <input className="me-8" type="radio" id='one1' name='two' onClick={() => fltrRating(4.0, 4.5)} />
+                  <input 
+                    className="me-8" 
+                    type="radio" 
+                    id='one1' 
+                    name='rating' 
+                    checked={selectedRating === 4.0} 
+                    onChange={() => handleRatingChange(4.0, 4.5)} 
+                  />
                   <img src={four} alt="" />
                   <div className="font-[U-reg] text-14 text-[#303141] ms-4">4.0 & up</div>
                   <div className="ms-8 font-[U-reg] text-14 text-[#303141]">(10,000) </div>
                 </div>
                 <div className="flex py-8">
-                  <input className="me-8" type="radio" id='one2' name='two' onClick={() => fltrRating(3.5, 4.0)} />
+                  <input 
+                    className="me-8" 
+                    type="radio" 
+                    id='one2' 
+                    name='rating' 
+                    checked={selectedRating === 3.5} 
+                    onChange={() => handleRatingChange(3.5, 4.0)} 
+                  />
                   <img src={threeHalf} alt="" />
-                  <div className="font-[U-reg] text-14 text-[#303141] ms-4">3.5 & up</div>
+                  <div className="font-[U-reg] text-14 text-[#303141] ms-4">3.5 & up</div> 
                   <div className="ms-8 font-[U-reg] text-14 text-[#303141]">(10,000) </div>
                 </div>
                 <div className="flex py-8">
-                  <input className="me-8" type="radio" id='one3' name='two' onClick={() => fltrRating(3.0, 3.5)} />
+                  <input 
+                    className="me-8" 
+                    type="radio" 
+                    id='one3' 
+                    name='rating' 
+                    checked={selectedRating === 3.0} 
+                    onChange={() => handleRatingChange(3.0, 3.5)} 
+                  />
                   <img src={three} alt="" />
                   <div className="font-[U-reg] text-14 text-[#303141] ms-4">3.0 & up</div>
                   <div className="ms-8 font-[U-reg] text-14 text-[#303141]">(10,000) </div>
@@ -178,4 +212,3 @@ export default function FilterList({
     </div>
   );
 }
- 

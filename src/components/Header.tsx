@@ -123,15 +123,15 @@ export default function Header(prop: HeaderProps) {
             {menuDisplay && <MenuList closeMenu={() => setMenuDisplay(false)} listMenu={listMenu} />}
 
             <div className='heder flex justify-between items-center xxs:w-full h-56 xxs:p-4 shadow-lg xl:h-72 xl:justify-start xl:pr-24 xl:m-0' >
-                <div className='px-10' onClick={MenuListExpand}>
-                    <img className='w-20 h-20 cursor-pointer xl:hidden' src={menuBtn} alt="Menu" />
+                <div className='px-10' onClick={MenuListExpand} >  
+                    <img className='w-20 h-20 cursor-pointer xl:hidden ' src={menuBtn} alt="Menu" />
                 </div>
 
                 <div className='flex justify-center xl:justify-start xl:pr-8'>
                     <img className='w-75 xl:w-91 xl:h-34 ' src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" alt="Logo" />
                 </div>
                 <div
-                    className="hidden my-12 p-12 font-[U-reg] text-14 xl:block cursor-pointer"
+                    className="hidden my-12 p-12 font-[U-reg] text-14 xl:block cursor-pointer hover:bg-[#ede5f9] rounded-sm"
                     onMouseEnter={() => setIsDropdownOpen(true)}
                     onMouseLeave={() => setIsDropdownOpen(false)}
                 >
@@ -142,11 +142,11 @@ export default function Header(prop: HeaderProps) {
                             <h2 className="px-16 pt-16 text-14 font-[U-bold] text-[#595c73]">Brows Certifications</h2>
                             <div className="flex justify-between items-center py-8 px-16 text-16 font-[U-reg] text-[#303141] hover:bg-gray-100">
                                 <p>Certificate preparation</p>
-                                <img className="w-5 h-5 ml-2" src={rightArrow} alt="Arrow" />
+                                <img className="w-5 h-5 ml-2" src={rightArrow} alt="Arrow" /> 
                             </div>
 
                             <div className="border-t">
-                                {dropMenuList.map((list, index) => (
+                                {dropMenuList.map((list, index) => (  
                                     <div key={index}>
                                         {list.items.map((item, itemIndex) => (
                                             <div key={itemIndex} className="flex justify-between items-center py-8 px-16 text-16 font-[U-reg] text-[#303141] hover:bg-gray-100">
@@ -161,13 +161,14 @@ export default function Header(prop: HeaderProps) {
                     )}
                 </div>
 
-                <div className="go hidden xl:block h-46 border rounded-full mx-12 flex-1 min-w-[150px]">
+                <div className="go   hidden xl:flex items-center h-46 border rounded-full mx-12 flex-1 min-w-[150px]">
+                    <img className='px-10' src={searchBtn} alt="" />
                 </div>
-                <div className='hidden my-12 p-12 font-[U-reg] text-14 3lm:block cursor-pointer'
+                <div className='hidden my-12 p-12 font-[U-reg] text-14 3lm:block cursor-pointer hover:bg-[#ede5f9] rounded-sm'
                     onMouseEnter={() => setIsDropdownOpenSix(true)}
                     onMouseLeave={() => setIsDropdownOpenSix(false)}
                 >
-                    <p> Udemy Bussiness</p>
+                    <p> Udemy Business</p>
                     {
                         isDropdownOpenSix && (
                             <div className='p-16 w-288 bg-white  shadow-lg rounded-lg absolute mt-30 me-240 flex items-center justify-between flex-col '>
@@ -177,10 +178,10 @@ export default function Header(prop: HeaderProps) {
                         )
                     }
                 </div>
-                <div className='hidden my-12 p-12 font-[U-reg] text-14 lx:block cursor-pointer'
+                <div className='hidden my-12 p-12 font-[U-reg] text-14 lx:block cursor-pointer hover:bg-[#ede5f9] rounded-sm'
                     onMouseEnter={() => setIsDropdownOpenSeven(true)}
                     onMouseLeave={() => setIsDropdownOpenSeven(false)}
-                >
+                > 
                     Teach on Udemy
                     {
                         isDropdownOpenSeven && (
@@ -191,11 +192,11 @@ export default function Header(prop: HeaderProps) {
                         )
                     } 
                 </div>
-                <div className='hidden  font-[U-reg] text-14 xl:flex w-104 cursor-pointer' style={{ justifyContent: 'center' }}
+                <div className='hidden  font-[U-reg] text-14 xl:flex w-96 cursor-pointer hover:bg-[#ede5f9] rounded-sm py-12' style={{ justifyContent: 'center' }}
                 onMouseEnter={() => setIsDropdownOpenEight(true)}
                 onMouseLeave={() => setIsDropdownOpenEight(false)}
                 >
-                    <p> My learning</p>
+                    <p> My learning</p> 
                     {
                         isDropdownOpenEight &&(
                             <div className='p-16 w-288 bg-white  shadow-lg rounded-lg absolute mt-50 me-240 flex items-center justify-between flex-col '>
@@ -206,27 +207,26 @@ export default function Header(prop: HeaderProps) {
                     }
                    
                 </div>
-                <div className='flex' style={{ margin: "0px -4px" }}>
-                    <div className='px-10 xl:hidden'>
+                <div className='flex ' style={{ margin: "0px -4px" }}>
+                    <div className='px-10 py-12 xl:hidden '>
                         <img className='w-20 h-20 ' src={searchBtn} alt="Search" />
                     </div>
 
-                    <div className='xl:hidden px-10 lm:flex lm:px-0 lm:items-center lm:justify-center lm:w-48 cursor-pointer' onMouseEnter={() => setIsDropdownOpenThree(true)} onMouseLeave={() => setIsDropdownOpenThree(false)}>
-                        <img className='w-20 h-20 xl:w-24 xl:h-24' src={whishlist} alt="Cart" />
+                    <div className='xxs:flex xxs:items-center xl:hidden px-10 lm:flex lm:px-0 lm:py-10 lm:items-center lm:justify-center lm:w-40 cursor-pointer hover:bg-[#ede5f9] rounded-sm' onMouseEnter={() => setIsDropdownOpenThree(true)} onMouseLeave={() => setIsDropdownOpenThree(false)}>
+                        <img className='w-20 h-20 xl:w-17 xl:h-17 ' src={whishlist} alt="Cart" />
                         {
                             isDropdownOpenThree && (
                                 <div className='p-16 w-288 bg-white h-90 shadow-lg rounded-lg absolute mt-170 me-240 flex items-center justify-between flex-col '>
                                     <p className='font-[U-reg] text-black'>Your whishlist is empty</p>
                                     <h3 className='font-[U-bold] text-[#6d28d2] text-14'>Explore course</h3>
                                 </div>
-                            )
+                            ) 
                         }
                     </div>
-                    <div className='px-10 xl:flex xl:px-0 xl:items-center xl:justify-center xl:w-48 cursor-pointer'>
-                        <img className='w-20 h-20 xl:w-24 xl:h-24' src={cartBtn} alt="Cart"
+                    <div className='px-10 xl:flex xl:px-0 xl:items-center xl:justify-center xl:w-40 py-10 cursor-pointer hover:bg-[#ede5f9] rounded-sm'>
+                        <img className='w-20 h-20 xl:w-20 xl:h-20' src={cartBtn} alt="Cart"
                             onMouseEnter={() => setIsDropdownOpenFour(true)}
                             onMouseLeave={() => setIsDropdownOpenFour(false)}
-
                         />
                         {
                             isDropdownOpenFour && (
@@ -237,8 +237,8 @@ export default function Header(prop: HeaderProps) {
                             )
                         }
                     </div>
-                    <div className='hidden px-10 lm:flex lm:px-0 lm:items-center lm:justify-center lm:w-48 cursor-pointer'>
-                        <img className='w-20 h-20 xl:w-24 xl:h-24' src={bell} alt="Cart"
+                    <div className='hidden px-10 lm:flex lm:px-0 lm:items-center lm:justify-center lm:w-40 cursor-pointer hover:bg-[#ede5f9] rounded-sm py-10'>
+                        <img className='w-20 h-20 xl:w-20 xl:h-20' src={bell} alt="Cart"
                             onMouseEnter={() => setIsDropdownOpenFive(true)}
                             onMouseLeave={() => setIsDropdownOpenFive(false)}
                         />
@@ -255,7 +255,7 @@ export default function Header(prop: HeaderProps) {
                         }
 
                     </div>
-                    <div className='hidden xl:flex w-64 justify-center '>
+                    <div className='hidden xl:flex w-56 justify-center hover:bg-[#ede5f9] rounded-sm py-10'>
                         <div className='flex justify-center items-center text-18 text-white bg-black rounded-full w-32 h-32 font-[U-bold] cursor-pointer'
                             onMouseEnter={() => setIsDropdownOpenTwo(true)}
                             onMouseLeave={() => setIsDropdownOpenTwo(false)}

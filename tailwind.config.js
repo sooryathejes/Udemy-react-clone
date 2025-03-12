@@ -2,7 +2,7 @@
 const generateWidths = () => {
   let widths = {};
   for (let i = 1; i <= 500; i++) {
-    widths[`${i}`] = `${i}px`; // Ensure keys are strings
+    widths[`${i}`] = `${i}px`; 
   }
   return widths;
 };
@@ -10,7 +10,7 @@ const generateWidths = () => {
 const generateSpacing = () => {
   let spacing = {};
   for (let i = 1; i <= 500; i++) {
-    spacing[`${i}`] = `${i}px`; // Ensure keys are strings
+    spacing[`${i}`] = `${i}px`; 
   }
   return spacing;
 };
