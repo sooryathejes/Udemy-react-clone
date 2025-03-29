@@ -29,7 +29,7 @@ export default function DropDownComp({ items, index }: DropDownCompProps) {
 
     return (  
         <div className='lg:w-[25%]'>
-            <div className="nth-[1]:border-0 border-t lg:border-0 ">
+            <div className="nth-[1]:border-0 border-t lg:border-0 "> 
                 <div
                     className={`flex justify-between py-16 ${isMobile ? 'cursor-pointer' : ''}`}
                     onClick={() => toggleCategory(index)}
@@ -50,7 +50,7 @@ export default function DropDownComp({ items, index }: DropDownCompProps) {
                 </div>
                 {(isMobile ? dropdown === index : true) && (
                     <div className="pt-8 pb-16">
-                        {items.items.map((item, i) => (
+                        {items.items.map((item, i) => ( 
                             <p key={i} className="py-4 text-[14px]">{item}</p>
                         ))}
                     </div>
@@ -58,4 +58,6 @@ export default function DropDownComp({ items, index }: DropDownCompProps) {
             </div>
         </div>
     );
-}
+ 
+} 
+ 

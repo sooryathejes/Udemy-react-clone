@@ -4,11 +4,11 @@ import udemy from './img/Udemy-1 (1).svg'
 
 
 type FooterProps = {
-    footerlist: {
+    footerItems: {
         title: string;
         items: string[];
     }[];
-    GrpList: {
+    GrpItems: {
         title: string;
         items: string[];
     }[]; 
@@ -17,7 +17,7 @@ type FooterProps = {
 export let footerItems = [
     {
         "title": "Certification by Issuer",
-        "items": [
+        "items": [ 
             "Amazon Web Services (AWS) Certifications",
             "Six Sigma Certifications",
             "Microsoft Certifications",
@@ -115,7 +115,7 @@ export let GrpItems = [
     } 
 ];
 
-export default function Footer({ footerlist, GrpList }: FooterProps) {
+export default function Footer(prop: FooterProps) {
     return (
         <div> 
             <div className='py-16 px-24 bg-[#1e1c27] text-white lg:flex'>
@@ -150,7 +150,7 @@ export default function Footer({ footerlist, GrpList }: FooterProps) {
                 </h1>
                 <div className='lg:flex flex-wrap'>
                 {
-                    footerlist.map((items, index) => (<DropDownComp items={items} key={index} index={index}/>))
+                    footerItems.map((items, index) => (<DropDownComp items={items} key={index} index={index}/>))
                 }
                 </div>
                 
@@ -158,7 +158,7 @@ export default function Footer({ footerlist, GrpList }: FooterProps) {
             <div className="pt-16 px-24 bg-black text-white xs:flex justify-between">
 
                 {
-                    GrpList.map((items,index) => ( <GroupItems items={items} key={index} index={index} /> ))
+                    GrpItems.map((items,index) => ( <GroupItems items={items} key={index} index={index} /> ))
 
                 }
                 </div>

@@ -50,5 +50,6 @@ module.exports = {
       fontSize: generateFontSizes(),
     },
   },
-  plugins: [],
+  plugins: [], 
 };
+ 

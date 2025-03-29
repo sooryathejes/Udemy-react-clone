@@ -11,7 +11,8 @@
         "lectures":"592 lectures",
         "levels":"Expert",
         "price":"Free",
-        "language":"Spanish"
+        "language":"Spanish",
+        "subtitle":"English"
 
     },
     {
@@ -25,7 +26,8 @@
         "lectures":"156 lectures",
         "levels":"All levels", 
         "price":"449",
-        "language":"English"  
+        "language":"Hindi" ,
+        "subtitle":"Spanish" 
  
     }, 
     { 
@@ -39,7 +41,8 @@
         "lectures":"352 lectures",
         "levels":"Intermediate", 
         "price":"Free",
-        "language":"English"
+        "language":"English",
+        "subtitle":"French"
 
     }, 
     {
@@ -53,7 +56,8 @@
         "lectures":"258 lectures",
         "levels":"All levels",
         "price":"Free",
-        "language":"English"
+        "language":"Tamil",
+        "subtitle":"English"
 
     },
     {
@@ -67,7 +71,8 @@
         "lectures":"459 lectures",
         "levels":"Intermediate",
         "price":"699",
-        "language":"Spanish"
+        "language":"Spanish",
+        "subtitle":"Spanish"
 
     },
     {
@@ -81,7 +86,8 @@
         "lectures":"345 lectures",
         "levels":"Beginner",
         "price":"599",
-        "language":"French"
+        "language":"French",
+        "subtitle":"French"
 
     },
     {
@@ -95,7 +101,8 @@
         "lectures":"112 lectures",
         "levels":"Beginner",
         "price":"599",
-        "language":"Spanish"
+        "language":"Spanish",
+        "subtitle":"English"
 
     },
     {
@@ -103,14 +110,14 @@
         "course":"Python PCEP: Become Certified Entry-Level Python Programmer",
         "instructor":"Adrian Wiech",
         "rating":4.0,
-        "stars":"./img1/4star.svg",
-        "reviews":"(8,071)",
+        "stars":"./img1/4star.svg",  
+        "reviews":"(8,071)", 
         "time":"4 total hours",
         "lectures":"74 lectures",
         "levels":"Beginner",
         "price":"599",
-        "language":"English"
-
+        "language":"English",
+        "subtitle":"Spanish"  
     },
     {
         "img" : "https://img-c.udemycdn.com/course/240x135/5414974_e415.jpg",
@@ -123,7 +130,8 @@
         "lectures":"250 lectures",
         "levels":"Expert",
         "price":"499",
-        "language":"English"
+        "language":"English",
+        "subtitle":"French"
 
     },
     {
@@ -137,7 +145,64 @@
         "lectures":"165 lectures",
         "levels":"Beginner",
         "price":"699",
-        "language":"English"
+        "language":"Malayalam",
+        "subtitle":"English"
+    },
+    { 
+        "img" : "https://img-c.udemycdn.com/course/240x135/567828_67d0.jpg",
+        "course":"The Complete JavaScript Course 2024",
+        "instructor":"Jonas Schmedtmann",
+        "rating":4.8,
+        "stars":"./img1/4.8 star.svg",
+        "reviews":"(250,345)",
+        "time":"69 total hours",
+        "lectures":"420 lectures",
+        "levels":"All Levels", 
+        "price":"₹1,599",
+        "language":"English",
+        "subtitle":"French"
+    },
+    { 
+        "img" : "https://img-c.udemycdn.com/course/240x135/1565838_e54e_18.jpg",
+        "course":"Python for Data Science and Machine Learning",
+        "instructor":"Jose Portilla",
+        "rating":4.7,
+        "stars":"./img1/4.7 star.svg",
+        "reviews":"(112,234)",
+        "time":"41 total hours",
+        "lectures":"320 lectures",
+        "levels":"Beginner", 
+        "price":"₹1,299",
+        "language":"Tamil", 
+        "subtitle":"French"
+    },
+    { 
+        "img" : "https://img-c.udemycdn.com/course/240x135/625204_436a_3.jpg",
+        "course":"Web Development Bootcamp",
+        "instructor":"Colt Steele",
+        "rating":4.6,
+        "stars":"./img1/4.6 star.svg",
+        "reviews":"(350,122)",
+        "time":"55 total hours",
+        "lectures":"380 lectures",
+        "levels":"All Levels",  
+        "price":"₹1,799",
+        "language":"English",
+        "subtitle":"French"
+    },
+    { 
+        "img" : "https://img-c.udemycdn.com/course/240x135/705264_caa9_13.jpg",
+        "course":"React - The Complete Guide 2024",
+        "instructor":"Maximilian Schwarzmüller",
+        "rating":4.9,
+        "stars":"./img1/4.9 star.svg",
+        "reviews":"(189,753)",
+        "time":"80 total hours",
+        "lectures":"490 lectures",
+        "levels":"Advanced", 
+        "price":"₹2,099",
+        "language":"Malayalam",
+        "subtitle":"French"
     }
 
 ] 
