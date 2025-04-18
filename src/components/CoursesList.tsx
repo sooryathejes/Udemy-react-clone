@@ -41,7 +41,7 @@ export default function CoursesList() {
     let ratingCount = (minRating: number, maxRating: number) => {
         let countRating = courses.filter(course => course.rating >= minRating && course.rating < maxRating).length
         return countRating
-    };
+    }; 
 
     const fltrLevel = (lvl: string) => {
         setSelectMultiple(prev => {
@@ -153,7 +153,7 @@ export default function CoursesList() {
                 <Filter items="example" id={1} showFilter={showFilter} />
                 <Sort />
             </div>
-            <div className='2xl:flex gap-4'> 
+            <div className='2xl:flex gap-4'>
                 <div className=''>
                     { 
                         filterShow && (

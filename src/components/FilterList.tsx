@@ -24,7 +24,7 @@ export default function FilterList({
   fltrRating,
   fltrLang,
   fltrPrice,
-  ratingCount, 
+  ratingCount,
   langCount,
   priceCount,
   fltrLevel,
@@ -43,7 +43,7 @@ export default function FilterList({
   };
 
   const handleRatingChange = (min: number, max: number) => {
-    setSelectedRating(min); 
+    setSelectedRating(min);
     fltrRating(min, max);
   };
 
@@ -89,7 +89,7 @@ export default function FilterList({
                     name='rating'
                     checked={selectedRating === 4.5}
                     onChange={() => handleRatingChange(4.5, 5.0)}
-                  />
+                  /> 
                   <img src={fourHalf} alt="" />
                   <div className="font-[U-reg] text-14 text-[#303141] ms-4">4.5 & up</div>
                   <div className="ms-8 font-[U-reg] text-14 text-[#303141]">({ratingCount(4.5, 5.0)})</div>
@@ -196,7 +196,7 @@ export default function FilterList({
                 className={`dropdown_icon transition-transform duration-300 ${dropdown.language ? 'rotate-180' : ''}`}
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
-                focusable="false" 
+                focusable="false"
                 width="24"
                 height="24"
               >
@@ -217,7 +217,7 @@ export default function FilterList({
                   <div className="font-[U-reg] text-14 text-[#303141] ms-4">English</div>
                   <div className="ms-8 font-[U-reg] text-14 text-[#303141]">({langCount("English")}) </div>
                 </div>
-                <div className="flex py-8"> 
+                <div className="flex py-8">
                   <input className="me-8" type="checkbox" onClick={() => fltrLang("Spanish")} />
                   <div className="font-[U-reg] text-14 text-[#303141] ms-4">Spanish</div>
                   <div className="ms-8 font-[U-reg] text-14 text-[#303141]">({langCount("Spanish")}) </div>
@@ -237,13 +237,13 @@ export default function FilterList({
 
                 {
                   dropdown.showMore && (
-                    <div> 
-                      <div className="flex py-8"> 
+                    <div>
+                      <div className="flex py-8">
                         <input className="me-8" type="checkbox" onClick={() => fltrLang("Hindi")} />
-                        <div className="font-[U-reg] text-14 text-[#303141] ms-4">Hindi</div> 
+                        <div className="font-[U-reg] text-14 text-[#303141] ms-4">Hindi</div>
                         <div className="ms-8 font-[U-reg] text-14 text-[#303141]">({langCount("Hindi")}) </div>
                       </div>
-                      <div className="flex py-8"> 
+                      <div className="flex py-8">
                         <input className="me-8" type="checkbox" onClick={() => fltrLang("Tamil")} />
                         <div className="font-[U-reg] text-14 text-[#303141] ms-4">Tamil</div>
                         <div className="ms-8 font-[U-reg] text-14 text-[#303141]">({langCount("Tamil")}) </div>
@@ -252,16 +252,16 @@ export default function FilterList({
                         <input className="me-8" type="checkbox" onClick={() => fltrLang("Malayalam")} />
                         <div className="font-[U-reg] text-14 text-[#303141] ms-4">Malayalam</div>
                         <div className="ms-8 font-[U-reg] text-14 text-[#303141]">({langCount("Malayalam")}) </div>
-                      </div> 
-                    </div> 
-                  ) 
-                } 
-              </div> 
+                      </div>
+                    </div>
+                  )
+                }
+              </div>
             )}
-          </div> 
-          <div>  
-            <div 
-              className="flex justify-between w-full py-16 font-[U-bold] text-16 cursor-pointer border-t" 
+          </div>
+          <div>
+            <div
+              className="flex justify-between w-full py-16 font-[U-bold] text-16 cursor-pointer border-t"
               onClick={() => toggleDropdown('Subtitles')}
             >
               <h3>Subtitles</h3>
@@ -300,9 +300,9 @@ export default function FilterList({
                 <div className="flex py-8">
                   <input className="me-8" type="checkbox" onClick={() => fltrSub("French")} />
                   <div className="font-[U-reg] text-14 text-[#303141] ms-4">French</div>
-                  <div className="ms-8 font-[U-reg] text-14 text-[#303141]">({subCount("French")}) </div> 
+                  <div className="ms-8 font-[U-reg] text-14 text-[#303141]">({subCount("French")}) </div>
                 </div>
-              </div> 
+              </div>
             )}
           </div>
           <div>
@@ -321,7 +321,7 @@ export default function FilterList({
               >
                 <defs>
                   <symbol id="icon-expand" viewBox="0 0 24 24">
-                    <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"></path> 
+                    <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"></path>
                   </symbol>
                 </defs>
                 <g>
