@@ -94,7 +94,7 @@ export let footerItems = [
             "Business Analysis"
         ]
     }
-];
+]; 
  
 export let GrpItems = [
     {
@@ -103,7 +103,7 @@ export let GrpItems = [
     },
     {
         title: "Discover Udemy", 
-        items: ["Get the app", "Teach on Udemy", "Plans and Pricing", "Affiliate", "Help and Support"]
+        items: ["Get the app", "Teach on Udemy", "Plans and Pricing", "Affiliate", "Help and Support"] 
     },
     {
         title: "Udemy for Business",
